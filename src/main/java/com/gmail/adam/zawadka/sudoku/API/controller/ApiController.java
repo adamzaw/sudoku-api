@@ -18,7 +18,7 @@ public class ApiController {
 //
 //    }
 
-    @RequestMapping(value = "/score/post", method = RequestMethod.POST, produces = "application/json", consumes = "application/json")
+    @PostMapping(value = "/score/post", consumes = {"application/json"})
     @ResponseBody
     public String setScore(@RequestBody Score score) throws Exception {
         String test = score.getNick();
